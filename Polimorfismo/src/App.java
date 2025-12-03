@@ -27,13 +27,15 @@
     con un'unica firma, che assume forme diverse in base all'oggetto a cui si riferisce.
   */
 
-public class App {
+public class App extends Object{
     
 
     public static void main(String[] args) throws Exception {
         
-        Persona p = new Persona("Mario", "Rossi");
-        Studente s = new Studente("Ugo", "Verdi", "4Bi");
+      Triennio t = new Triennio();
+
+        Object p = new Persona("Mario", "Rossi");
+        Object s = new Studente("Ugo", "Verdi", "4Bi");
 
         // è possibile grazie al principio di Liskov
         Persona p3;

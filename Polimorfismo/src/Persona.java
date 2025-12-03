@@ -8,6 +8,8 @@ public class Persona /*extends Object*/{
         this.cognome = cognome;
     }
 
+    
+
     @Override
     public String toString() {
         return nome+" "+cognome;
