@@ -16,4 +16,10 @@ public class Rettangolo extends Figura{
         
         return getAltezza()*getBase();
     }
+
+
+    @Override
+    public double perimetro() {
+        return (getAltezza()*2) + (getBase()*2);
+    }
 }

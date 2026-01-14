@@ -3,6 +3,10 @@ public class App {
 
         try {
 
+            IMisurabile xx = new CampoCalcio("MaraCanà", 120, 40);
+
+            Figura ff = new Rettangolo(3, 4, "rett");
+
             Figure collFigure = new Figure(5);
 
             Rettangolo r1;

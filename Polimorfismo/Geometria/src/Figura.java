@@ -7,7 +7,7 @@
     Il suo scopo è quello di fungere da modello base impedendone una creazione diretta di oggetti.
 */
 
-public abstract class Figura {
+public abstract class Figura implements IMisurabile{
     private int base;
     private int altezza;
     private String nome;
@@ -55,7 +55,7 @@ public abstract class Figura {
 
 
     // un metodo astratto è un metodo senza corpo, ossia, in Java, senza le parentesi graffe
-    public abstract double area();
+    //public abstract double area();
 
 
      // questo metodo permette di definire quando una figura è uguale ad un'altra figura
