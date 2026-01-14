@@ -17,7 +17,7 @@ public class Quadrato extends Rettangolo{
     @Override
     public String toString() {
         
-        return getClass().getName() +" lato = "+getLato();
+        return getClass().getName() + " - "+getNome()+" - lato = "+getLato();
     }
 
     @Override

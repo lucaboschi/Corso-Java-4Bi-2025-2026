@@ -7,7 +7,7 @@
     Il suo scopo è quello di fungere da modello base impedendone una creazione diretta di oggetti.
 */
 
-public abstract class Figura implements IMisurabile{
+public abstract class Figura implements IMisurabile, Comparable<Figura>{
     private int base;
     private int altezza;
     private String nome;
@@ -96,5 +96,23 @@ public abstract class Figura implements IMisurabile{
         return  this.getNome().equals(f.getNome());
             
     } 
+
+    @Override
+    public int compareTo(Figura o){
+
+        /*if (this.getNome().compareTo(o.getNome()) < 0) {
+            return -1;
+        }
+        else if(this.getNome().compareTo(o.getNome()) == 0){
+            return 0;
+        }
+        else{
+            return 1;
+        }*/
+
+
+        return this.getNome().compareToIgnoreCase(o.getNome());
+
+    }
 
 }

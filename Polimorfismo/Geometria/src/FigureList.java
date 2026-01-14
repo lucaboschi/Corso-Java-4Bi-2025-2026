@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class FigureList 
 {
@@ -32,6 +34,10 @@ public class FigureList
     }
 
 
+    public void addFigura(Figura figura){
+        collezione.add(figura);
+    }
+
     /**
      * Rimuove tutte le figure il cui nome è uguale o contiene la stringa passata come parametro.
      * Restituisce il numero di figure rimosse.
@@ -52,8 +58,32 @@ public class FigureList
         return numeroFigure;
     }
 
+    /**
+     * Ordina le figura in ordine alfabetico per nome
+     */
     public void sort()
     {
         Collections.sort(collezione);
+    }
+
+    /**
+     * Ordina le figura in base al criterio passato come parametro
+     * @param criterio Criterio di ordinamento delle figure
+     */
+    public void sort(Comparator<Figura> criterio)
+    {
+        Collections.sort(collezione, criterio);
+    }
+
+    @Override
+    public String toString() {
+        
+        String tmp="";
+
+        for (int i = 0; i < collezione.size(); i++) {
+            tmp+=collezione.get(i).toString()+"\n";
+        }
+
+        return tmp;
     }
 }
