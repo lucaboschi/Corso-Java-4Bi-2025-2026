@@ -2,7 +2,7 @@ public class App {
     public static void main(String[] args) {
         Albero albero = new Albero();
 
-        Nodo n1 = new Nodo(50);
+        Nodo n1 = new Nodo(50);                                  
 
         albero.insert(n1);
         albero.insert(30);
@@ -11,5 +11,8 @@ public class App {
         albero.insert(70);
         albero.insert(60);
         albero.insert(80);
+
+        albero.visitaInOrder();
+        System.out.println();
     }
 }

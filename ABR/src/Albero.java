@@ -1,3 +1,5 @@
+import java.security.PublicKey;
+
 public class Albero {
 
     private Nodo radice;
@@ -81,6 +83,55 @@ public class Albero {
         }
         
         return root;
+    }
+
+    public void visitaInOrder()
+    {
+        visitaInOrderRicorsiva(radice);
+    }
+
+    private void visitaInOrderRicorsiva(Nodo root)
+    {
+        if (root!=null) 
+        {
+            visitaInOrderRicorsiva(root.getSinistra());    
+            System.out.print(root.getKey()+ " ");
+            visitaInOrderRicorsiva(root.getDestra());    
+        }
+    }    
+
+
+
+    public void visitaPreOrder()
+    {
+        visitaPreOrderRicorsiva(radice);
+    }
+
+    private void visitaPreOrderRicorsiva(Nodo root)
+    {
+        if (root!=null) 
+        {
+            System.out.print(root.getKey()+ " ");
+            visitaPreOrderRicorsiva(root.getSinistra());    
+            visitaPreOrderRicorsiva(root.getDestra());    
+        }
+    }
+
+
+
+    public void visitaPostOrder()
+    {
+        visitaPostOrderRicorsiva(radice);
+    }
+
+    private void visitaPostOrderRicorsiva(Nodo root)
+    {
+        if (root!=null) 
+        {
+            visitaPostOrderRicorsiva(root.getSinistra());    
+            visitaPostOrderRicorsiva(root.getDestra());    
+            System.out.print(root.getKey()+ " ");
+        }
     }
 
 }
